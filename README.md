@@ -10,9 +10,11 @@ Grado en Ingeniería Informática
 
 Spring Boot 3
 
-Lanzar aplicación
+Lanzar aplicación desde consola
+
 ```
-spring-boot:run
+cd backend
+ ./mvnw spring-boot:run
 ```
 
 Visualizar API expuesta
