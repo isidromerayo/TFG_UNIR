@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "26d230f4-ad37-4138-b1eb-45655e3d4c16",
+		"name": "TFG_UNIR-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4070955"
+	},
+	"item": [
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\" : \"{{$randomBankAccountName}}\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\",\n    \"estado\" : \"A\",\n    \"valoracionMedia\" : 0.00,\n    \"precio\" : {{$randomPrice}},\n    \"etiquetas\" : \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HTTP_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "API",
+			"value": "api",
+			"type": "string"
+		}
+	]
+}
