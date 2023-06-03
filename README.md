@@ -29,3 +29,12 @@ Estudiar:
 * Angular
 * React
 * Vue.js
+
+
+### Referencias
+
+#### Backend
+
+https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
+
+#### Frontend
