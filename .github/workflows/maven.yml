@@ -28,7 +28,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
+<<<<<<< HEAD
       run: mvnw -B package --file backend/pom.xml
+=======
+      run: ./backend/mvnw -B package --file ./backend/pom.xml
+>>>>>>> 4ef4a73aad770c0e201be71e7c4b6fbcc71fcb73
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
