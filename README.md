@@ -8,7 +8,20 @@ Grado en Ingeniería Informática
 
 ### Backend
 
-Spring Boot 3
+#### BBDD: MariaDB para producción
+
+```
+MariaDB [(none)]> create database tfg_unir; -- create NEW database
+MariaDB [(none)]> create user 'user_tfg'@'%' identified by 'tfg_un1r_PWD'; -- create user
+MariaDB [(none)]> grant all on tfg_unir.* to 'user_tfg'@'%'; -- give all privileges to the user
+```
+
+#### BBDD: H2 para test
+
+
+#### Lanzar aplicación con Spring Boot 3
+
+Es necesario disponer de BBDD
 
 Lanzar aplicación desde consola
 
