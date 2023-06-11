@@ -8,6 +8,11 @@ Grado en Ingeniería Informática
 
 ### Backend
 
+```
+cd backend
+./mvnw clean install
+```
+
 #### BBDD: MariaDB para producción
 
 ```
