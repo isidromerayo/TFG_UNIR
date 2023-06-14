@@ -28,13 +28,59 @@
 					"response": []
 				},
 				{
+					"name": "Curso por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/7",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Crear curso",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(",
+									"    \"random_number_price\",",
+									"    _.random(1,1000)/_.random(1,50)",
+									")",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"titulo\" : \"{{$randomBankAccountName}}\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\",\n    \"estado\" : \"A\",\n    \"valoracionMedia\" : 0.00,\n    \"precio\" : {{$randomPrice}},\n    \"etiquetas\" : \"\"\n}",
+							"raw": "{\n    \"titulo\" : \"{{$randomColor}} {{$randomProductName}}\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\",\n    \"estado\" : \"A\",\n    \"valoracionMedia\" : 0.00,\n    \"precio\" : {{random_number_price}},\n    \"etiquetas\" : \"{{$randomAdjective}}, {{$randomCurrencyName}}, {{$randomProductName}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -49,6 +95,284 @@
 							"path": [
 								"{{API}}",
 								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar curso - precio fijo 9.95",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(",
+									"    \"random_number_price\",",
+									"    _.random(1,1000)/_.random(1,50)",
+									")",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\" : \"{{$randomColor}} {{$randomProductName}}\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\",\n    \"estado\" : \"A\",\n    \"valoracionMedia\" : 0.00,\n    \"precio\" : 9.95,\n    \"etiquetas\" : \"{{$randomAdjective}}, {{$randomCurrencyName}}, {{$randomProductName}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/7",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cursos con mayor valoración media",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/search/selectMorePoints",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"search",
+								"selectMorePoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cursos actualizados más recientemente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/search/selectLastUpdates",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"search",
+								"selectLastUpdates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias - CRUD",
+			"item": [
+				{
+					"name": "Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias/1",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria por id NO EXISTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias/100000000",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias",
+								"100000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\" : \"{{$randomLoremWord}} {{$randomLoremWord}}\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\" : \"{{$randomLoremWord}} {{$randomLoremWord}} (UPDATED)\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias/6",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Elimininar categoria existe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\" : \"{{$randomProductName}} UPDATED\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias/6",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Elimininar categoria NO existe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\" : \"{{$randomProductName}} UPDATED\",\n    \"descripcion\" : \"{{$randomLoremParagraph}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/categorias/100000000",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"categorias",
+								"100000000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Valoraciones curso",
+			"item": [
+				{
+					"name": "Valoraciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/valoraciones",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"valoraciones"
 							]
 						}
 					},

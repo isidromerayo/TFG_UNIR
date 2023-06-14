@@ -2,8 +2,10 @@ package eu.estilolibre.tfgunir.backend.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -15,11 +17,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import lombok.Data;
 
+/**
+ * 
+ */
 @Data
 @Entity
 @Table(name = "cursos")
@@ -46,8 +52,20 @@ public class Curso {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categoria_id", referencedColumnName = "id")
     private Categoria categoria;
-    @ManyToMany(mappedBy = "misCursos")
+    @ManyToMany(mappedBy = "misCursosComprados")
     private Set<Usuario> alumnos;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "instructor_id", referencedColumnName = "id")
+    private Instructor instructor;
+    @OneToMany(
+        mappedBy = "curso",
+        cascade = CascadeType.ALL,
+        orphanRemoval = true,
+        fetch = FetchType.LAZY
+    )
+    private Set<Contenido> contenidos = new HashSet<Contenido>();
+    @OneToMany(mappedBy = "curso")
+    Set<Avance> avances;
 
     @PrePersist
     protected void onCreate() {
