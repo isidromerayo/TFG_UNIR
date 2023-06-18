@@ -15,10 +15,17 @@ cd backend
 
 #### BBDD: MariaDB para producción
 
+##### Crear base de datos y usuario
 ```
 MariaDB [(none)]> create database tfg_unir; -- create NEW database
 MariaDB [(none)]> create user 'user_tfg'@'%' identified by 'tfg_un1r_PWD'; -- create user
 MariaDB [(none)]> grant all on tfg_unir.* to 'user_tfg'@'%'; -- give all privileges to the user
+```
+
+##### Carga inicial de datos
+
+```
+mariadb -u user_tfg -ptfg_un1r_PWD tfg_unir < recursos/db/dump.mariadb.sql 
 ```
 
 #### BBDD: H2 para test
