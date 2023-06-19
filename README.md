@@ -74,6 +74,20 @@ Circle CI
 #### Backend
 
 https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
+https://cloudinfrastructureservices.co.uk/how-to-install-mariadb-on-ubuntu-20-04/
+https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html
 
 #### Frontend
+
+##### Angular
+
+###### Instalar y ejecutar
+
+```
+cd frontend-angular
+npm install
+ng serve
+```
+
+http://localhost:4200
 
