@@ -15,10 +15,17 @@ cd backend
 
 #### BBDD: MariaDB para producción
 
+##### Crear base de datos y usuario
 ```
 MariaDB [(none)]> create database tfg_unir; -- create NEW database
 MariaDB [(none)]> create user 'user_tfg'@'%' identified by 'tfg_un1r_PWD'; -- create user
 MariaDB [(none)]> grant all on tfg_unir.* to 'user_tfg'@'%'; -- give all privileges to the user
+```
+
+##### Carga inicial de datos
+
+```
+mariadb -u user_tfg -ptfg_un1r_PWD tfg_unir < recursos/db/dump.mariadb.sql 
 ```
 
 #### BBDD: H2 para test
@@ -67,6 +74,20 @@ Circle CI
 #### Backend
 
 https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
+https://cloudinfrastructureservices.co.uk/how-to-install-mariadb-on-ubuntu-20-04/
+https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html
 
 #### Frontend
+
+##### Angular
+
+###### Instalar y ejecutar
+
+```
+cd frontend-angular
+npm install
+ng serve
+```
+
+http://localhost:4200
 
