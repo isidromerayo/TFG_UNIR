@@ -1,12 +1,16 @@
 # TFG_UNIR
 
 Universidad Internacional de La Rioja
+
 Escuela Superior de Ingeniería y Tecnología 
+
 Grado en Ingeniería Informática
 
 ## Frameworks frontend JavaScript: Análisis y estudio práctico
 
 ### Backend
+
+Es necesaria una versión de Java 17, para utilizar Spring Boot 3.0.x
 
 ```
 cd backend
@@ -55,31 +59,7 @@ Estudiar:
 * React
 * Vue.js
 
-
-### Referencias
-
-#### Status
-
-Github Actions
-
-![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)
-
-![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)
-
-Circle CI
-[![CircleCI - develop](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/develop)
-
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/main)
-
-#### Backend
-
-https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
-https://cloudinfrastructureservices.co.uk/how-to-install-mariadb-on-ubuntu-20-04/
-https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html
-
-#### Frontend
-
-##### Angular
+#### Angular
 
 Versiones:
 
@@ -106,7 +86,7 @@ rxjs                            7.8.1
 typescript                      5.0.4
 ```
 
-###### Instalar y ejecutar
+##### Instalar y ejecutar
 
 ```
 cd frontend-angular
@@ -117,7 +97,7 @@ ng serve
 http://localhost:4200
 
 
-##### React (+NEXT.js)
+#### React (+NEXT.js)
 
 
 ```
@@ -134,7 +114,7 @@ Ok to proceed? (y) Y
 ✔ Would you like to customize the default import alias? … No / Yes
 ```
 
-###### Instalar y ejecutar
+##### Instalar y ejecutar
 
 
 ```
@@ -146,7 +126,7 @@ npm run dev
 http://localhost:3000
 
 
-##### Vue.js
+#### Vue.js
 
 Para installar y ejecutar la última versión (16/07/2023), debemos tener una versión de node: '>=v16.20.0'
 
@@ -174,7 +154,7 @@ Vue.js - The Progressive JavaScript Framework
 ✔ Add Prettier for code formatting? … No / Yes
 ```
 
-###### Instalar y ejecutar
+##### Instalar y ejecutar
 
 ```
 cd frontend-vue
@@ -184,3 +164,28 @@ npm run dev
 ```
 
 http://localhost:5173/
+
+
+#### Status
+
+Github Actions
+
+![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)
+
+![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)
+
+Circle CI
+[![CircleCI - develop](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/develop)
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/main)
+
+
+### Referencias
+
+#### Backend
+
+https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
+https://cloudinfrastructureservices.co.uk/how-to-install-mariadb-on-ubuntu-20-04/
+https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html
+
+#### Frontend
