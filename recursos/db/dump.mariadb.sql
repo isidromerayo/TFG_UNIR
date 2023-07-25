@@ -131,7 +131,7 @@ CREATE TABLE `cursos` (
   KEY `FKlkw7xmvewmkbr8466hk8acevp` (`instructor_id`),
   CONSTRAINT `FKlkw7xmvewmkbr8466hk8acevp` FOREIGN KEY (`instructor_id`) REFERENCES `instructores` (`id`),
   CONSTRAINT `FKo6ihsoct2e21c6mpnpxs0vonr` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,7 +140,7 @@ CREATE TABLE `cursos` (
 
 LOCK TABLES `cursos` WRITE;
 /*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
-INSERT INTO `cursos` VALUES (1,'lorem ipsum chanante','A',NULL,'2023-05-15','2023-01-01',9.99,'Angular',4.6,5,1),(2,'Incididunt zagal traeros tol jamón chachachá ',NULL,NULL,'2023-05-15','2023-01-01',9.99,'React',4.7,5,1),(3,'Chachachá tollina bocachoti monetes. ',NULL,NULL,'2023-06-18','2023-01-01',9.99,'Vue.js',4.8,5,1),(4,'Chanante ipsum dolor sit amet, traeros tol jamón forrondo',NULL,NULL,'2023-06-18','2023-03-01',9.99,'Principios de Acústica para el Home Studio',4.5,1,2),(5,'Bufonesco elit eres un pirámidee fresquete payacho ',NULL,NULL,'2023-06-18','2023-03-01',12.99,'Home Studio intermedio',4.5,1,2),(6,'Regomello elit dolore droja hueles avinagrado cacahué labore',NULL,NULL,'2023-06-18','2023-03-01',15.99,'Masterizacion de Audio: La guía completa de cómo masterizar',4.6,1,2),(7,'Corporis voluptates libero labore laudantium quo ab consequuntur molestiae ipsa. Et ab fugit recusandae rerum ullam distinctio at aut voluptatem. Quo est vero vel corrupti.','A','bluetooth, Cape Verde Escudo, Tasty Rubber Soap','2023-06-11','2023-06-01',20.95,'grey Small Steel Hat',0,9,3),(8,'Soluta aut sit. A mollitia magni incidunt. Distinctio facilis in quis nulla. Reprehenderit et assumenda. Ut aspernatur quia assumenda aliquid omnis.','A','','2023-06-11','2023-06-11',163.62,'Home Loan Account',0,9,3),(9,'Delectus ab et magnam. Perspiciatis nisi distinctio similique cupiditate. Exercitationem sed ut voluptas harum vero ea odio. Eligendi inventore possimus. Et doloribus non omnis expedita minima placeat corrupti.','A','','2023-06-11','2023-06-11',45.00,'Investment Account',0,10,3),(10,'Iusto et iusto culpa ipsam. Voluptatem distinctio fugiat eos debitis necessitatibus adipisci voluptatem. Odio esse iste quas aut placeat ut est. Minus labore saepe eum accusantium ut praesentium voluptas.','A','','2023-06-11','2023-06-11',15.75,'Checking Account',0,10,3),(11,'Et qui fugiat sed voluptatem dolorum ea sunt impedit. Id rerum doloribus rem accusamus odit nihil itaque enim. Beatae esse aspernatur non illo dicta velit eum. Ipsam dolorem iste.','A','','2023-06-11','2023-06-11',178.20,'Personal Loan Account',0,11,3);
+INSERT INTO `cursos` VALUES (1,'lorem ipsum chanante','A',NULL,'2023-05-15','2023-01-01',9.99,'Angular',4.6,5,1),(2,'Incididunt zagal traeros tol jamón chachachá ','A',NULL,'2023-05-15','2023-01-01',9.99,'React',4.7,5,1),(3,'Chachachá tollina bocachoti monetes. ','A',NULL,'2023-06-18','2023-01-01',9.99,'Vue.js',4.8,5,1),(4,'Chanante ipsum dolor sit amet, traeros tol jamón forrondo','A',NULL,'2023-06-18','2023-03-01',9.99,'Principios de Acústica para el Home Studio',4.5,1,2),(5,'Bufonesco elit eres un pirámidee fresquete payacho ','A',NULL,'2023-06-18','2023-03-01',12.99,'Home Studio intermedio',4.5,1,2),(6,'Regomello elit dolore droja hueles avinagrado cacahué labore','A',NULL,'2023-06-18','2023-03-01',15.99,'Masterizacion de Audio: La guía completa de cómo masterizar',4.6,1,2),(7,'Corporis voluptates libero labore laudantium quo ab consequuntur molestiae ipsa. Et ab fugit recusandae rerum ullam distinctio at aut voluptatem. Quo est vero vel corrupti.','A','bluetooth, Cape Verde Escudo, Tasty Rubber Soap','2023-06-11','2023-06-01',20.95,'grey Small Steel Hat',0,9,3),(8,'Soluta aut sit. A mollitia magni incidunt. Distinctio facilis in quis nulla. Reprehenderit et assumenda. Ut aspernatur quia assumenda aliquid omnis.','A','','2023-06-11','2023-06-11',163.62,'Home Loan Account',0,9,3),(9,'Delectus ab et magnam. Perspiciatis nisi distinctio similique cupiditate. Exercitationem sed ut voluptas harum vero ea odio. Eligendi inventore possimus. Et doloribus non omnis expedita minima placeat corrupti.','A','','2023-06-11','2023-06-11',45.00,'Investment Account',0,10,3),(10,'Iusto et iusto culpa ipsam. Voluptatem distinctio fugiat eos debitis necessitatibus adipisci voluptatem. Odio esse iste quas aut placeat ut est. Minus labore saepe eum accusantium ut praesentium voluptas.','A','','2023-06-11','2023-06-11',15.75,'Checking Account',0,10,3),(11,'Et qui fugiat sed voluptatem dolorum ea sunt impedit. Id rerum doloribus rem accusamus odit nihil itaque enim. Beatae esse aspernatur non illo dicta velit eum. Ipsam dolorem iste.','A','','2023-06-11','2023-06-11',178.20,'Personal Loan Account',0,11,3),(12,'No es necesario que tengas conocimientos de fotografía, se parte desde cero y se enseña a cada alumno el manejo de su propia cámara en modo manual (no es necesario que te leas el libro de instrucciones). ','A','foto','2023-07-25','2023-07-25',60.00,'Curso de iniciación a la fotografía',5,2,4);
 /*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,7 +158,7 @@ CREATE TABLE `instructores` (
   `fecha_alta` date DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -167,7 +167,7 @@ CREATE TABLE `instructores` (
 
 LOCK TABLES `instructores` WRITE;
 /*!40000 ALTER TABLE `instructores` DISABLE KEYS */;
-INSERT INTO `instructores` VALUES (1,'Merayo','I.T.Informática de Gestión Chanante ipsum dolor sit amet, interneeeer enim tontiploster hueles avinagrado bizcoché. Cabeza de viejo cuerpo de joven enratonao ut cosica ju-já chiquititantantan cascoporro regomello tunante.','2023-01-01','Isidro'),(2,'Hernandez','Conocido por la producción de discos de música independiente de bandas bien conocidas como Los Planetas, Sr. Chinarro o Mercromina.','2022-02-02','Carlos'),(3,'de Amor Bizarro','Una vez que fichan por el sello Mushroom Pillow, graban su primer disco, Triángulo de Amor Bizarro (2007), con el técnico Carlos Hernández','2022-02-02','Triángulo');
+INSERT INTO `instructores` VALUES (1,'Merayo','I.T.Informática de Gestión Chanante ipsum dolor sit amet, interneeeer enim tontiploster hueles avinagrado bizcoché. Cabeza de viejo cuerpo de joven enratonao ut cosica ju-já chiquititantantan cascoporro regomello tunante.','2023-01-01','Isidro'),(2,'Hernandez','Conocido por la producción de discos de música independiente de bandas bien conocidas como Los Planetas, Sr. Chinarro o Mercromina.','2022-02-02','Carlos'),(3,'de Amor Bizarro','Una vez que fichan por el sello Mushroom Pillow, graban su primer disco, Triángulo de Amor Bizarro (2007), con el técnico Carlos Hernández','2022-02-02','Triángulo'),(4,'Sánchez Sánchez','FOTÓGRAFO PROFESIONAL ESPECIALIZADO EN NATURALEZA Y RETRATO','2023-07-25','Paula');
 /*!40000 ALTER TABLE `instructores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,4 +267,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-25 12:45:25
+-- Dump completed on 2023-07-25 18:47:22
