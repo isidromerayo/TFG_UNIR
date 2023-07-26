@@ -379,6 +379,103 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios/7",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"{{$randomFirstName}}\",\n    \"apellidos\": \"{{$randomLastName}}\",\n    \"email\": \"{{$randomExampleEmail}}\",\n    \"password\": \"TFG_1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar usuario - estado Activo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estado\": \"A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios/9",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
