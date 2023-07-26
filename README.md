@@ -51,6 +51,11 @@ Visualizar API expuesta
 http://localhost:8080/api
 
 
+Swagger
+
+http://localhost:8080/swagger-ui.html
+
+
 ### Frontend
 
 Estudiar:
