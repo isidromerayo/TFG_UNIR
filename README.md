@@ -187,12 +187,12 @@ http://localhost:5173/
 
 Github Actions
 
-![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)
+[![Java CI with Maven](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml)
 
-![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)
+[![Java CI with Maven](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml)
 
 Circle CI
-[![CircleCI - develop](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/develop)
+[![CircleCI develop](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/develop)
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/main)
 
