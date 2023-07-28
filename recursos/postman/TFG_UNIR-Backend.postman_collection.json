@@ -182,6 +182,58 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "buscar cursos titulo contiene...",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/search/findByTituloContaining?titulo=a",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"search",
+								"findByTituloContaining"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar cursos titulo contiene... SIN RESULTADOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/search/findByTituloContaining?titulo=adsf",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"search",
+								"findByTituloContaining"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "adsf"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -450,7 +502,10 @@
 				{
 					"name": "actualizar usuario - estado Activo",
 					"request": {
-						"method": "PUT",
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
