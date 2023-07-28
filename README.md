@@ -19,7 +19,13 @@ cd backend
 
 #### BBDD: MariaDB para producción
 
+```
+$ mariadb --version
+mariadb  Ver 15.1 Distrib 10.3.38-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+```
+
 ##### Crear base de datos y usuario
+
 ```
 MariaDB [(none)]> create database tfg_unir; -- create NEW database
 MariaDB [(none)]> create user 'user_tfg'@'%' identified by 'tfg_un1r_PWD'; -- create user
@@ -30,6 +36,12 @@ MariaDB [(none)]> grant all on tfg_unir.* to 'user_tfg'@'%'; -- give all privile
 
 ```
 mariadb -u user_tfg -ptfg_un1r_PWD tfg_unir < recursos/db/dump.mariadb.sql 
+```
+
+Backup con mysql de datos
+
+```
+mysqldump -u user_tfg -ptfg_un1r_PWD tfg_unir > recursos/db/dump.mariadb.sql 
 ```
 
 #### BBDD: H2 para test
@@ -49,6 +61,11 @@ cd backend
 Visualizar API expuesta
 
 http://localhost:8080/api
+
+
+Swagger
+
+http://localhost:8080/swagger-ui.html
 
 
 ### Frontend
@@ -170,12 +187,12 @@ http://localhost:5173/
 
 Github Actions
 
-![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)
+[![Java CI with Maven](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml)
 
-![branch main](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)
+[![Java CI with Maven](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml)
 
 Circle CI
-[![CircleCI - develop](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/develop)
+[![CircleCI develop](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/develop)
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/main)
 

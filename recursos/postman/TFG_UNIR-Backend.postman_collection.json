@@ -182,6 +182,58 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "buscar cursos titulo contiene...",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/search/findByTituloContaining?titulo=a",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"search",
+								"findByTituloContaining"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar cursos titulo contiene... SIN RESULTADOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/cursos/search/findByTituloContaining?titulo=adsf",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"cursos",
+								"search",
+								"findByTituloContaining"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "adsf"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -373,6 +425,106 @@
 							"path": [
 								"{{API}}",
 								"valoraciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios/7",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"{{$randomFirstName}}\",\n    \"apellidos\": \"{{$randomLastName}}\",\n    \"email\": \"{{$randomExampleEmail}}\",\n    \"password\": \"TFG_1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar usuario - estado Activo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estado\": \"A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTP_URL}}/{{API}}/usuarios/9",
+							"host": [
+								"{{HTTP_URL}}"
+							],
+							"path": [
+								"{{API}}",
+								"usuarios",
+								"9"
 							]
 						}
 					},
