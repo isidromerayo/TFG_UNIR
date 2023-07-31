@@ -183,6 +183,12 @@ npm run dev
 http://localhost:5173/
 
 
+#### Librerías de terceros
+
+[sweetalert2](https://sweetalert2.github.io/) - A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes
+
+[axios](https://axios-http.com/) - Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.
+
 #### Status
 
 Github Actions
