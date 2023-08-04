@@ -40,7 +40,7 @@ CREATE TABLE `avances` (
   KEY `FK5mofhd64umg71n9rvjwd5nr1c` (`usuario_id`),
   CONSTRAINT `FK5mofhd64umg71n9rvjwd5nr1c` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
   CONSTRAINT `FKt77k35yqyhqwvpv9f5wnl1c3w` FOREIGN KEY (`curso_id`) REFERENCES `cursos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,7 +49,7 @@ CREATE TABLE `avances` (
 
 LOCK TABLES `avances` WRITE;
 /*!40000 ALTER TABLE `avances` DISABLE KEYS */;
-INSERT INTO `avances` VALUES (1,1,4,1);
+INSERT INTO `avances` VALUES (1,1,4,1),(2,2,1,2);
 /*!40000 ALTER TABLE `avances` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,7 @@ CREATE TABLE `categorias` (
   `descripcion` varchar(255) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +74,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'','Música'),(2,'','Fotografía y vídeo'),(3,'','Salud y fitness'),(4,'','Desarrollo'),(5,'','Informática y software'),(6,'Atque libero quos. Officiis commodi dignissimos magni excepturi expedita quisquam consequatur. Ut neque sint nihil fugit. Unde enim eum.','consequatur commodi (UPDATED)'),(7,'Dolores molestiae nobis voluptatum quod ad. Rem libero delectus veritatis accusamus est numquam laboriosam deleniti. Autem magni nesciunt corporis natus. A perspiciatis accusantium est fugiat pariatur labore dicta dolore. Perspiciatis sunt eius deserunt.','Rustic Concrete Chicken'),(8,'Est nostrum animi nam sunt. Laborum vitae et omnis nihil vel. Omnis aut quam neque in ea. Asperiores velit dolorum commodi quis magni quo enim voluptatibus sed. Et dolores autem odit velit a et voluptate.','est aliquam'),(9,'Molestiae error sint aut. Porro doloremque atque aut porro aut et illum autem. Nulla et quasi officiis hic reiciendis ipsam velit rerum.','illo quia (UPDATED)'),(10,'Sed ut sed voluptatem atque odit similique. Quas adipisci fuga et. Nostrum optio et dolores molestiae esse culpa ad. Voluptas rerum qui sed hic. Exercitationem non molestiae optio distinctio. Nobis quia voluptatem voluptatem qui distinctio quaerat.','ut (UPDATED)'),(11,'Id voluptatem amet sint et eum. Qui et est voluptas eum est similique. Maiores amet aspernatur velit in. Harum nihil error harum asperiores. Commodi quia consequatur voluptas maxime eligendi. At iure eligendi laudantium nesciunt at deleniti unde corrupti.','sapiente (UPDATED)');
+INSERT INTO `categorias` VALUES (1,'','Música'),(2,'','Fotografía y vídeo'),(3,'','Salud y fitness'),(4,'','Desarrollo'),(5,'','Informática y software'),(6,'Atque libero quos. Officiis commodi dignissimos magni excepturi expedita quisquam consequatur. Ut neque sint nihil fugit. Unde enim eum.','consequatur commodi (UPDATED)'),(7,'Dolores molestiae nobis voluptatum quod ad. Rem libero delectus veritatis accusamus est numquam laboriosam deleniti. Autem magni nesciunt corporis natus. A perspiciatis accusantium est fugiat pariatur labore dicta dolore. Perspiciatis sunt eius deserunt.','Rustic Concrete Chicken'),(8,'Est nostrum animi nam sunt. Laborum vitae et omnis nihil vel. Omnis aut quam neque in ea. Asperiores velit dolorum commodi quis magni quo enim voluptatibus sed. Et dolores autem odit velit a et voluptate.','est aliquam'),(9,'Molestiae error sint aut. Porro doloremque atque aut porro aut et illum autem. Nulla et quasi officiis hic reiciendis ipsam velit rerum.','illo quia (UPDATED)'),(10,'Sed ut sed voluptatem atque odit similique. Quas adipisci fuga et. Nostrum optio et dolores molestiae esse culpa ad. Voluptas rerum qui sed hic. Exercitationem non molestiae optio distinctio. Nobis quia voluptatem voluptatem qui distinctio quaerat.','ut (UPDATED)'),(11,'Id voluptatem amet sint et eum. Qui et est voluptas eum est similique. Maiores amet aspernatur velit in. Harum nihil error harum asperiores. Commodi quia consequatur voluptas maxime eligendi. At iure eligendi laudantium nesciunt at deleniti unde corrupti.','sapiente (UPDATED)'),(12,'Perspiciatis et perspiciatis aut et a quam iste neque ducimus. Qui molestias quisquam suscipit magni. Voluptatem ullam pariatur commodi est quis quia fugiat. Delectus rerum porro soluta.','dicta sit');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,7 +131,7 @@ CREATE TABLE `cursos` (
   KEY `FKlkw7xmvewmkbr8466hk8acevp` (`instructor_id`),
   CONSTRAINT `FKlkw7xmvewmkbr8466hk8acevp` FOREIGN KEY (`instructor_id`) REFERENCES `instructores` (`id`),
   CONSTRAINT `FKo6ihsoct2e21c6mpnpxs0vonr` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,7 +140,7 @@ CREATE TABLE `cursos` (
 
 LOCK TABLES `cursos` WRITE;
 /*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
-INSERT INTO `cursos` VALUES (1,'lorem ipsum chanante','A',NULL,'2023-05-15','2023-01-01',9.99,'Angular',4.6,5,1),(2,'Incididunt zagal traeros tol jamón chachachá ','A',NULL,'2023-05-15','2023-01-01',9.99,'React',4.7,5,1),(3,'Gracias a este curso aprenderás desde a crear tus propias aplicaciones web  desde cero usando Vue.js 3, Strapi, Firebase, etc...\n\nAprenderás a crear aplicaciones web donde el cliente está desacoplado del servidor y a desplegarlos.','A',NULL,'2023-06-18','2023-01-01',9.99,'Vue.js',4.8,5,1),(4,'Chanante ipsum dolor sit amet, traeros tol jamón forrondo','A',NULL,'2023-06-18','2023-03-01',9.99,'Principios de Acústica para el Home Studio',4.81,1,2),(5,'Bufonesco elit eres un pirámidee fresquete payacho ','A',NULL,'2023-06-18','2023-03-01',12.99,'Home Studio intermedio',4.5,1,2),(6,'Regomello elit dolore droja hueles avinagrado cacahué labore','A',NULL,'2023-06-18','2023-03-01',15.99,'Masterizacion de Audio: La guía completa de cómo masterizar',4.6,1,2),(7,'Corporis voluptates libero labore laudantium quo ab consequuntur molestiae ipsa. Et ab fugit recusandae rerum ullam distinctio at aut voluptatem. Quo est vero vel corrupti.','A','bluetooth, Cape Verde Escudo, Tasty Rubber Soap','2023-06-11','2023-06-01',20.95,'grey Small Steel Hat',0,9,3),(8,'Soluta aut sit. A mollitia magni incidunt. Distinctio facilis in quis nulla. Reprehenderit et assumenda. Ut aspernatur quia assumenda aliquid omnis.','A','','2023-06-11','2023-06-11',163.62,'Home Loan Account',0,9,3),(9,'Delectus ab et magnam. Perspiciatis nisi distinctio similique cupiditate. Exercitationem sed ut voluptas harum vero ea odio. Eligendi inventore possimus. Et doloribus non omnis expedita minima placeat corrupti.','A','','2023-06-11','2023-06-11',45.00,'Investment Account',0,10,3),(10,'Iusto et iusto culpa ipsam. Voluptatem distinctio fugiat eos debitis necessitatibus adipisci voluptatem. Odio esse iste quas aut placeat ut est. Minus labore saepe eum accusantium ut praesentium voluptas.','A','','2023-06-11','2023-06-11',15.75,'Checking Account',0,10,3),(11,'Et qui fugiat sed voluptatem dolorum ea sunt impedit. Id rerum doloribus rem accusamus odit nihil itaque enim. Beatae esse aspernatur non illo dicta velit eum. Ipsam dolorem iste.','A','','2023-06-21','2023-06-21',178.20,'Personal Loan Account',0,11,3),(12,'No es necesario que tengas conocimientos de fotografía, se parte desde cero y se enseña a cada alumno el manejo de su propia cámara en modo manual (no es necesario que te leas el libro de instrucciones). ','A','foto','2023-07-25','2023-07-25',60.00,'Curso de iniciación a la fotografía',4.88,2,4),(13,'Está orientada a que aprendas a desenvolverte en la fotografía de paisaje por lo que se irá dando nociones y consejos a cada uno durante toda la jornada sobre filtros y composición.','A','foto','2023-07-25','2023-07-25',80.00,'Curso fotografía de paisaje',4.12,2,4);
+INSERT INTO `cursos` VALUES (1,'lorem ipsum chanante','A',NULL,'2023-05-15','2023-01-01',9.99,'Angular',4.6,5,1),(2,'Incididunt zagal traeros tol jamón chachachá ','A',NULL,'2023-05-15','2023-01-01',9.99,'React',4.7,5,1),(3,'Gracias a este curso aprenderás desde a crear tus propias aplicaciones web  desde cero usando Vue.js 3, Strapi, Firebase, etc...\n\nAprenderás a crear aplicaciones web donde el cliente está desacoplado del servidor y a desplegarlos.','A',NULL,'2023-06-18','2023-01-01',9.99,'Vue.js',4.8,5,1),(4,'Chanante ipsum dolor sit amet, traeros tol jamón forrondo','A',NULL,'2023-06-18','2023-03-01',9.99,'Principios de Acústica para el Home Studio',4.81,1,2),(5,'Bufonesco elit eres un pirámidee fresquete payacho ','A',NULL,'2023-06-18','2023-03-01',12.99,'Home Studio intermedio',4.5,1,2),(6,'Regomello elit dolore droja hueles avinagrado cacahué labore','A',NULL,'2023-06-18','2023-03-01',15.99,'Masterizacion de Audio: La guía completa de cómo masterizar',4.6,1,2),(7,'Corporis voluptates libero labore laudantium quo ab consequuntur molestiae ipsa. Et ab fugit recusandae rerum ullam distinctio at aut voluptatem. Quo est vero vel corrupti.','A','bluetooth, Cape Verde Escudo, Tasty Rubber Soap','2023-06-11','2023-06-01',20.95,'grey Small Steel Hat',0,9,3),(8,'Soluta aut sit. A mollitia magni incidunt. Distinctio facilis in quis nulla. Reprehenderit et assumenda. Ut aspernatur quia assumenda aliquid omnis.','A','','2023-06-11','2023-06-11',163.62,'Home Loan Account',0,9,3),(9,'Delectus ab et magnam. Perspiciatis nisi distinctio similique cupiditate. Exercitationem sed ut voluptas harum vero ea odio. Eligendi inventore possimus. Et doloribus non omnis expedita minima placeat corrupti.','A','','2023-06-11','2023-06-11',45.00,'Investment Account',0,10,3),(10,'Iusto et iusto culpa ipsam. Voluptatem distinctio fugiat eos debitis necessitatibus adipisci voluptatem. Odio esse iste quas aut placeat ut est. Minus labore saepe eum accusantium ut praesentium voluptas.','A','','2023-06-11','2023-06-11',15.75,'Checking Account',0,10,3),(11,'Et qui fugiat sed voluptatem dolorum ea sunt impedit. Id rerum doloribus rem accusamus odit nihil itaque enim. Beatae esse aspernatur non illo dicta velit eum. Ipsam dolorem iste.','A','','2023-06-21','2023-06-21',178.20,'Personal Loan Account',0,11,3),(12,'No es necesario que tengas conocimientos de fotografía, se parte desde cero y se enseña a cada alumno el manejo de su propia cámara en modo manual (no es necesario que te leas el libro de instrucciones). ','A','foto','2023-07-25','2023-07-25',60.00,'Curso de iniciación a la fotografía',4.88,2,4),(13,'Está orientada a que aprendas a desenvolverte en la fotografía de paisaje por lo que se irá dando nociones y consejos a cada uno durante toda la jornada sobre filtros y composición.','A','foto','2023-07-25','2023-07-25',80.00,'Curso fotografía de paisaje',4.12,2,4),(14,'Perferendis qui esse deserunt nemo dolor. Deserunt nihil quisquam numquam. Illo aspernatur officiis autem velit sed rerum sed velit velit.','A','haptic, Pula, Tasty Granite Car','2023-07-30','2023-07-30',31.50,'lime Practical Rubber Pants',0,NULL,NULL),(15,'Non dolores debitis quam voluptate sint. Delectus possimus error esse dolorem. Doloremque ab ut commodi ipsa.','A','1080p, Kip, Sleek Plastic Tuna','2023-07-30','2023-07-30',7.69,'azure Awesome Rubber Chicken',0,NULL,NULL);
 /*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,12 +181,13 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `apellidos` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL UNIQUE,
+  `email` varchar(255) NOT NULL,
   `estado` char(1) DEFAULT 'P',
   `nombre` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -195,7 +196,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'García Sánchez','maria@localhost','P','María',NULL),(2,'Ponferrada Dominguez','juanantonio@localhost','P','Juan Antonio',NULL),(3,'Toral Alonso','marta@localhost','P','Marta',NULL),(4,'Villa Ledesma','pedro@localhost','P','Pedro',NULL),(5,'García Sánchez','helena@localhost','A','Helena',NULL),(6,'Toreno Sil','carlos@localhost','A','Carlos',NULL),(7,'Boeza Alonso','ines@localhost','A','Ines',NULL),(8,'Fresnedo Noceda','isable@localhost','A','Isabel',NULL);
+INSERT INTO `usuarios` VALUES (1,'García Sánchez','maria@localhost','P','María','1234'),(2,'Ponferrada Dominguez','juanantonio@localhost','P','Juan Antonio','1234'),(3,'Toral Alonso','marta@localhost','P','Marta','1234'),(4,'Villa Ledesma','pedro@localhost','P','Pedro','1234'),(5,'García Sánchez','helena@localhost','A','Helena','1234'),(6,'Toreno Sil','carlos@localhost','A','Carlos','1234'),(7,'Boeza Alonso','ines@localhost','A','Ines','1234'),(8,'Fresnedo Noceda','isable@localhost','A','Isabel','1234'),(9,'Canedo Castro','c@example.com','A','Carla','1234'),(11,'Diaz Diez','d@example.com','P','Diego','1234'),(12,'Cedro Claro','c@demo.com','P','Clara','1234'),(14,'Martinez Marcos','m@example.com','P','Marta','1234'),(15,'Frami','Kathryne1@example.com','P','Krista','1234'),(16,'Harber','Alva_Streich@example.net','P','Jevon','TFG_1234');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,7 +223,7 @@ CREATE TABLE `usuarios_cursos` (
 
 LOCK TABLES `usuarios_cursos` WRITE;
 /*!40000 ALTER TABLE `usuarios_cursos` DISABLE KEYS */;
-INSERT INTO `usuarios_cursos` VALUES (1,4),(1,5),(2,1),(2,2),(2,3),(3,1),(4,4),(5,4),(5,5),(5,6),(8,6);
+INSERT INTO `usuarios_cursos` VALUES (1,4),(1,5),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3),(4,4),(5,4),(5,5),(5,6),(8,6),(9,1),(9,2),(9,3),(9,4);
 /*!40000 ALTER TABLE `usuarios_cursos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,7 +246,7 @@ CREATE TABLE `valoraciones` (
   KEY `FKmtbedrv2q0wjdsrvnb57g8whw` (`usuario_id`),
   CONSTRAINT `FKbbir6wjjxjr3nsbl4d5semvi3` FOREIGN KEY (`curso_id`) REFERENCES `cursos` (`id`),
   CONSTRAINT `FKmtbedrv2q0wjdsrvnb57g8whw` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -254,7 +255,7 @@ CREATE TABLE `valoraciones` (
 
 LOCK TABLES `valoraciones` WRITE;
 /*!40000 ALTER TABLE `valoraciones` DISABLE KEYS */;
-INSERT INTO `valoraciones` VALUES (1,'comentario de prueba de 02-05-2023','2023-05-02',4,4,1),(3,'Molestias voluptatem eos suscipit iure dolorem modi repellendus qui. Maxime temporibus explicabo. Necessitatibus natus eius consequatur qui nesciunt ab eius labore. Natus dolor aperiam adipisci culpa quia.','2023-06-11',5,5,1),(6,'Eaque doloribus molestiae quam. Et occaecati quis repudiandae aut non aperiam expedita. Quo delectus adipisci facilis doloribus aut exercitationem vitae dignissimos. Velit eius dolore.','2023-06-11',5,1,2),(7,'Tempora doloribus voluptas voluptate nihil. Repellendus repellendus dicta consequatur vitae et quis nihil quo. Cum sapiente rem ut odit molestiae tempora voluptates.','2023-06-11',5,1,2);
+INSERT INTO `valoraciones` VALUES (1,'comentario de prueba de 02-05-2023','2023-05-02',4,4,1),(3,'Molestias voluptatem eos suscipit iure dolorem modi repellendus qui. Maxime temporibus explicabo. Necessitatibus natus eius consequatur qui nesciunt ab eius labore. Natus dolor aperiam adipisci culpa quia.','2023-06-11',5,5,1),(6,'Eaque doloribus molestiae quam. Et occaecati quis repudiandae aut non aperiam expedita. Quo delectus adipisci facilis doloribus aut exercitationem vitae dignissimos. Velit eius dolore.','2023-06-11',5,1,2),(7,'Tempora doloribus voluptas voluptate nihil. Repellendus repellendus dicta consequatur vitae et quis nihil quo. Cum sapiente rem ut odit molestiae tempora voluptates.','2023-06-11',5,1,2),(8,'Chanante ipsum dolor sit amet, es de traca nisi eveniet elit elit, saepe muchachada monetes. Aliqua mangurrián churretoso et veniam aliqua adipisicing ut, ex elit horcate ea. Ahí va qué chorrazo ut et monetes adipisicing. Et ullamco ut melifluo cascoporro ex interneeeer viejuno minim incididunt nostrud ut labore. Enim ut ut eiusmod bizcoché ad gambitero bufonesco ju-já saepe. Ad minim labore et veniam adipisicing ex quis. Eiusmod ullamco ut dolore one more time elit nisi ut ex enim freshquisimo nisi.','2023-07-28',4,2,3),(9,'Mangurrián elit aliqua fresquete tempor zanguango tempor piticli quis nostrud eiusmod. Chiquititantantan enim tempor saepe. Magna, ut elit et to sueltecico. Veniam aliqua chachachá. Ea tontaco, ad eveniet gaticos, ut eiusmod saepe. Magna ex aliqua ojete moreno elit exercitation exercitation minim nianoniano asquerosito chotera elit ut. Pepino en la mano aliqua ahí va qué chorrazo exercitation minim, ullamco.','2023-07-22',3,4,4),(10,'Chanante ipsum dolor sit amet, nisi regomello ut ad. Minim, ut, ut cascoporro tollina ex artista. Traeros tol jamón hueles avinagrado minim síberet asquerosito labore te viste de torero melifluo eiusmod.','2023-07-01',3,3,3);
 /*!40000 ALTER TABLE `valoraciones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -267,4 +268,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-25 19:01:16
+-- Dump completed on 2023-07-31 13:39:48

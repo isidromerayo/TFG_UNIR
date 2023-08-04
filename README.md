@@ -183,6 +183,14 @@ npm run dev
 http://localhost:5173/
 
 
+#### Librerías de terceros
+
+[sweetalert2](https://sweetalert2.github.io/) - A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes
+
+[axios](https://axios-http.com/) - Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.
+
+[Yup](https://github.com/jquense/yup) - Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
+
 #### Status
 
 Github Actions
