@@ -1,22 +1,80 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
+import RegistroComponent from '../components/RegistroComponent.vue'
+import HomeComponent from '../components/HomeComponent.vue'
+import ErrorComponent from '../components/ErrorComponent.vue'
+import AccesoComponent from '../components/AccesoComponent.vue'
+import CarritoComponent from '../components/CarritoComponent.vue'
+import CategoriasComponent from '../components/CategoriasComponent.vue'
+import CategoriaComponent from '../components/CategoriaComponent.vue'
+import CursoComponent from '../components/CursoComponent.vue';
+import MisCursosComponent from  '../components/MisCursosComponent.vue';
+import MisDatosComponent from '../components/MisDatosComponent.vue'
+import BusquedaComponent from '../components/BusquedaComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: HomeView
+      component: HomeComponent
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/categorias',
+      name: 'categorias',
+      component: CategoriasComponent
+    },
+    {
+      path: '/categoria/:id',
+      name: 'categoria',
+      component: CategoriaComponent
+    },
+    {
+      path: '/curso/:id',
+      name: 'curso',
+      component: CursoComponent
+    },
+    {
+      path: '/buscar/:search',
+      name: 'busqueda',
+      component: BusquedaComponent
+    },
+    {
+      path: '/registro',
+      name: 'registro',
+      component: RegistroComponent
+    },
+    {
+      path: '/acceso',
+      name: 'acceso',
+      component: AccesoComponent
+    },
+    {
+      path: '/carrito',
+      name: 'carrito',
+      component: CarritoComponent
+    },
+    {
+      path: '/mis-cursos',
+      name: 'mis-cursos',
+      component: MisCursosComponent
+    },
+    {
+      path: '/mis-datos',
+      name: 'mis-datos',
+      component: MisDatosComponent
+    },    
+    {
+      path: '/:pathMatch(.*)*',
+      name: '404',
+      component: ErrorComponent
     }
+    
   ]
 })
 
