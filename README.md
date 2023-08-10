@@ -250,3 +250,8 @@ https://cloudinfrastructureservices.co.uk/how-to-install-mariadb-on-ubuntu-20-04
 https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html
 
 #### Frontend
+
+
+##### Vue3
+
+Navigation guards:  https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
