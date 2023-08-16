@@ -76,6 +76,41 @@ Estudiar:
 * React
 * Vue.js
 
+
+#### Versiones
+
+Windows 
+
+```
+>npm version
+{
+  npm: '9.5.1',
+  node: '18.16.0',
+  acorn: '8.8.2',
+  ada: '1.0.4',
+  ares: '1.19.0',
+  brotli: '1.0.9',
+  cldr: '42.0',
+  icu: '72.1',
+  llhttp: '6.0.10',
+  modules: '108',
+  napi: '8',
+  nghttp2: '1.52.0',
+  nghttp3: '0.7.0',
+  ngtcp2: '0.8.1',
+  openssl: '3.0.8+quic',
+  simdutf: '3.2.2',
+  tz: '2022g',
+  undici: '5.21.0',
+  unicode: '15.0',
+  uv: '1.44.2',
+  uvwasi: '0.0.15',
+  v8: '10.2.154.26-node.26',
+  zlib: '1.2.13'
+}
+```
+
+
 #### Angular
 
 Versiones:
@@ -215,3 +250,8 @@ https://cloudinfrastructureservices.co.uk/how-to-install-mariadb-on-ubuntu-20-04
 https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html
 
 #### Frontend
+
+
+##### Vue3
+
+Navigation guards:  https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
