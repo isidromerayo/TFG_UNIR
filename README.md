@@ -1,10 +1,10 @@
 # TFG_UNIR
 
-Universidad Internacional de La Rioja
+### Universidad Internacional de La Rioja
 
-Escuela Superior de Ingeniería y Tecnología 
+### Escuela Superior de Ingeniería y Tecnología 
 
-Grado en Ingeniería Informática
+#### Grado en Ingeniería Informática
 
 ## Frameworks frontend JavaScript: Análisis y estudio práctico
 
@@ -44,6 +44,12 @@ Backup con mysql de datos
 mysqldump -u user_tfg -ptfg_un1r_PWD tfg_unir > recursos/db/dump.mariadb.sql 
 ```
 
+#### Docker MariaDB
+
+Carga inicial para utilizar por el backend con Spring Boot con datos de pruebas del directorio recursos/db
+
+`docker run --name mariadb-tfg -p 3306:3306 -d isidromerayo/mariadb-tfg`
+
 #### BBDD: H2 para test
 
 
@@ -67,6 +73,9 @@ Swagger
 
 http://localhost:8080/swagger-ui.html
 
+#### Docker Spring Boot 
+
+https://spring.io/guides/topicals/spring-boot-docker/
 
 ### Frontend
 
