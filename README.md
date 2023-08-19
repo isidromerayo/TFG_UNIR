@@ -82,6 +82,9 @@ https://javatodev.com/docker-compose-for-spring-boot-with-mariadb/
 
 Con docker compose se montará un contendor con MariaDB (datos precargados) y otro con la aplicación de Spring Boot 3 con el API 
 
+Nota: application.properties debe apuntar al alias de docker 'app_db' y no a localhost en `spring.datasource.url=jdbc:mariadb://app_db:3306/tfg_unir`
+
+
 ```
 cd backend
 docker compose up
