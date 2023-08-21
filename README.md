@@ -97,7 +97,7 @@ cd backend
 docker compose up
 ```
 
-MariaDB correra en el puerto por defecto 3306 y Spring Boot 3 en el 8080, así no tendremos montado lo necesario para tener el backend y probar la aplicación con los diferentes frameworks.
+MariaDB correra en el puerto por defecto *3306* y Spring Boot 3 en el *8080*, así no tendremos montado lo necesario para tener el backend y probar la aplicación con los diferentes frameworks.
 
 Con `docker compose up -d` corre en segundo plano y liberamos la terminal
 
