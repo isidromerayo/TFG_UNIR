@@ -75,6 +75,13 @@ http://localhost:8080/swagger-ui.html
 
 #### Docker Spring Boot 
 
+Construir imagen de aplicación con el jar generado del backend (con el `spring.datasource.url=jdbc:mariadb://app_db:3306/tfg_unir` en el application.properties)
+
+```
+cd backend
+docker build --build-arg JAR_FILE=target/backend.jar -t isidromerayo/spring-backend-tfg:VERSION-X.Y.Z .
+```
+
 https://spring.io/guides/topicals/spring-boot-docker/
 https://javatodev.com/docker-compose-for-spring-boot-with-mariadb/
 
