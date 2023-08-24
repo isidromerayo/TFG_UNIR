@@ -75,6 +75,15 @@ http://localhost:8080/swagger-ui.html
 
 #### Docker Spring Boot 
 
+Construir imagen de aplicación con el jar generado del backend (con el `spring.datasource.url=jdbc:mariadb://app_db:3306/tfg_unir` en el application.properties) hay que ejecutar un maven para generar
+
+
+```
+cd backend
+./mvnw clean install
+docker build --build-arg JAR_FILE=target/backend.jar -t isidromerayo/spring-backend-tfg:VERSION-X.Y.Z .
+```
+
 https://spring.io/guides/topicals/spring-boot-docker/
 https://javatodev.com/docker-compose-for-spring-boot-with-mariadb/
 
@@ -90,7 +99,24 @@ cd backend
 docker compose up
 ```
 
-MariaDB correra en el puerto por defecto 3306 y Spring Boot 3 en el 8080
+MariaDB correra en el puerto por defecto *3306* y Spring Boot 3 en el *8080*, así no tendremos montado lo necesario para tener el backend y probar la aplicación con los diferentes frameworks.
+
+Con `docker compose up -d` corre en segundo plano y liberamos la terminal
+
+```
+[+] Running 2/2
+ ✔ Container backend-maria_db-1     Started     0.4s 
+ ✔ Container backend-api_service-1  Started     0.6s 
+
+```
+
+Para detener las instancias de los contenedores `docker compose stop`.
+
+```
+[+] Stopping 2/2
+ ✔ Container backend-api_service-1  Stopped     0.3s 
+ ✔ Container backend-maria_db-1     Stopped     0.5s 
+```
 
 ### Frontend
 
