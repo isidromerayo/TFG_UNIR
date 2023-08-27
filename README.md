@@ -276,6 +276,8 @@ http://localhost:5173/
 
 [Yup](https://github.com/jquense/yup) - Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
 
+[Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction?ref=hackernoon.com) - A small, fast, and scalable bearbones state management solution. Zustand has a comfy API based on hooks. It isn't boilerplatey or opinionated, but has enough convention to be explicit and flux-like.
+
 #### Status
 
 Github Actions
