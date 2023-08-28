@@ -306,4 +306,7 @@ https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.sp
 
 ##### Vue3
 
+Nextjs testing: https://nextjs.org/docs/pages/building-your-application/optimizing/testing
+
 Navigation guards:  https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
+
