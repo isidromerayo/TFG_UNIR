@@ -198,6 +198,21 @@ ng serve
 
 http://localhost:4200
 
+##### Testing
+
+*Unitarios e integración*
+
+Jasmine y Karma
+
+Por defecto `ng test` lanzar en el navegador el test runner 
+
+Sin lanzar navegador `npm run test-headless`
+
+*End to end*
+
+cypress
+
+Por defecto `ng e2e` 
 
 #### React (+NEXT.js)
 
