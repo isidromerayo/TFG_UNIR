@@ -267,6 +267,9 @@ npm run dev
 
 http://localhost:5173/
 
+##### Testing
+
+ `npm run test:unit`
 
 #### Librerías de terceros
 
@@ -303,10 +306,12 @@ https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.sp
 
 #### Frontend
 
-
-##### Vue3
+##### Nextjs
 
 Nextjs testing: https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 
+##### Vue3
+
+Testing https://vuejs.org/guide/scaling-up/testing.html
 Navigation guards:  https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
 
