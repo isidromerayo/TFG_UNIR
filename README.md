@@ -296,6 +296,8 @@ http://localhost:5173/
 
 [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction?ref=hackernoon.com) - A small, fast, and scalable bearbones state management solution. Zustand has a comfy API based on hooks. It isn't boilerplatey or opinionated, but has enough convention to be explicit and flux-like.
 
+[React Hook Form](https://www.react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
+
 #### Status
 
 Github Actions
