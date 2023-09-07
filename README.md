@@ -190,11 +190,22 @@ typescript                      5.0.4
 
 ##### Instalar y ejecutar
 
+*Desarrollo*
+
 ```
 cd frontend-angular
 npm install
 ng serve
 ```
+
+*Producción*
+
+```
+cd frontend-angular
+npm install
+ng build
+```
+
 
 http://localhost:4200
 
@@ -233,11 +244,20 @@ Ok to proceed? (y) Y
 
 ##### Instalar y ejecutar
 
+*Desarrollo*
 
 ```
 cd frontend-react
 npm install
 npm run dev
+```
+
+*Producción*
+
+```
+cd frontend-react
+npm install
+npm run build
 ```
 
 http://localhost:3000
@@ -273,6 +293,8 @@ Vue.js - The Progressive JavaScript Framework
 
 ##### Instalar y ejecutar
 
+*Desarrollo*
+
 ```
 cd frontend-vue
 npm install
@@ -280,6 +302,13 @@ npm run format
 npm run dev
 ```
 
+*Producción*
+
+```
+cd frontend-vue
+npm install
+npm run build
+```
 http://localhost:5173/
 
 ##### Testing
