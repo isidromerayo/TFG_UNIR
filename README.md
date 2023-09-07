@@ -198,6 +198,8 @@ npm install
 ng serve
 ```
 
+http://localhost:4200
+
 *Producción*
 
 ```
@@ -205,9 +207,6 @@ cd frontend-angular
 npm install
 ng build
 ```
-
-
-http://localhost:4200
 
 ##### Testing
 
@@ -252,6 +251,9 @@ npm install
 npm run dev
 ```
 
+http://localhost:3000
+
+
 *Producción*
 
 ```
@@ -259,9 +261,6 @@ cd frontend-react
 npm install
 npm run build
 ```
-
-http://localhost:3000
-
 
 #### Vue.js
 
@@ -302,6 +301,8 @@ npm run format
 npm run dev
 ```
 
+http://localhost:5173/
+
 *Producción*
 
 ```
@@ -309,7 +310,6 @@ cd frontend-vue
 npm install
 npm run build
 ```
-http://localhost:5173/
 
 ##### Testing
 
