@@ -262,6 +262,12 @@ npm install
 npm run build
 ```
 
+##### Testing
+
+```
+npm run test
+```
+
 #### Vue.js
 
 Para installar y ejecutar la última versión (16/07/2023), debemos tener una versión de node: '>=v16.20.0'
