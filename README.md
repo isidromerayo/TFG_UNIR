@@ -190,6 +190,8 @@ typescript                      5.0.4
 
 ##### Instalar y ejecutar
 
+*Desarrollo*
+
 ```
 cd frontend-angular
 npm install
@@ -198,6 +200,29 @@ ng serve
 
 http://localhost:4200
 
+*Producción*
+
+```
+cd frontend-angular
+npm install
+ng build
+```
+
+##### Testing
+
+*Unitarios e integración*
+
+Jasmine y Karma
+
+Por defecto `ng test` lanzar en el navegador el test runner 
+
+Sin lanzar navegador `npm run test-headless`
+
+*End to end*
+
+cypress
+
+Por defecto `ng e2e` 
 
 #### React (+NEXT.js)
 
@@ -218,6 +243,7 @@ Ok to proceed? (y) Y
 
 ##### Instalar y ejecutar
 
+*Desarrollo*
 
 ```
 cd frontend-react
@@ -227,6 +253,20 @@ npm run dev
 
 http://localhost:3000
 
+
+*Producción*
+
+```
+cd frontend-react
+npm install
+npm run build
+```
+
+##### Testing
+
+```
+npm run test
+```
 
 #### Vue.js
 
@@ -258,6 +298,8 @@ Vue.js - The Progressive JavaScript Framework
 
 ##### Instalar y ejecutar
 
+*Desarrollo*
+
 ```
 cd frontend-vue
 npm install
@@ -267,6 +309,17 @@ npm run dev
 
 http://localhost:5173/
 
+*Producción*
+
+```
+cd frontend-vue
+npm install
+npm run build
+```
+
+##### Testing
+
+ `npm run test:unit`
 
 #### Librerías de terceros
 
@@ -275,6 +328,10 @@ http://localhost:5173/
 [axios](https://axios-http.com/) - Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.
 
 [Yup](https://github.com/jquense/yup) - Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
+
+[Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction?ref=hackernoon.com) - A small, fast, and scalable bearbones state management solution. Zustand has a comfy API based on hooks. It isn't boilerplatey or opinionated, but has enough convention to be explicit and flux-like.
+
+[React Hook Form](https://www.react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 
 #### Status
 
@@ -301,7 +358,12 @@ https://docs.spring.io/spring-data/jpa/docs/3.1.x/reference/html/https://docs.sp
 
 #### Frontend
 
+##### Nextjs
+
+Nextjs testing: https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 
 ##### Vue3
 
+Testing https://vuejs.org/guide/scaling-up/testing.html
 Navigation guards:  https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
+
