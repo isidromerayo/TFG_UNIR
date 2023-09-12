@@ -256,11 +256,16 @@ http://localhost:3000
 
 *Producción*
 
+Arranca un servidor web ligero basado en Node.js server
+
 ```
 cd frontend-react
 npm install
 npm run build
+npm run start
 ```
+
+http://localhost:3000
 
 ##### Testing
 
@@ -315,7 +320,10 @@ http://localhost:5173/
 cd frontend-vue
 npm install
 npm run build
+npm run preview
 ```
+
+http://localhost:4173
 
 ##### Testing
 
