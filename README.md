@@ -160,6 +160,22 @@ Windows
 }
 ```
 
+#### Usuarios de prueba
+
+*Activos*
+
+Usuario: __c@example.com__
+Contraseña: __1234__
+
+Usuario: __ines@localhost__
+Contraseña: __1234__
+
+
+*Pendientes*
+
+Usuario: __maria@localhost__
+Contraseña: __1234__
+
 
 #### Angular
 
