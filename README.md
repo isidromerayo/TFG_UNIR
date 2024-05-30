@@ -362,6 +362,7 @@ http://localhost:4173
 Github Actions
 
 [![Java CI with Maven](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg)](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fisidromerayo%2FTFG_UNIR.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fisidromerayo%2FTFG_UNIR?ref=badge_shield)
 
 [![Java CI with Maven](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml/badge.svg?branch=develop)](https://github.com/isidromerayo/TFG_UNIR/actions/workflows/maven.yml)
 
@@ -391,3 +392,7 @@ Nextjs testing: https://nextjs.org/docs/pages/building-your-application/optimizi
 Testing https://vuejs.org/guide/scaling-up/testing.html
 Navigation guards:  https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fisidromerayo%2FTFG_UNIR.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fisidromerayo%2FTFG_UNIR?ref=badge_large)
