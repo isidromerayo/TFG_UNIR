@@ -18,7 +18,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "next": "14.1.1",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-hook-form": "^7.45.4",
     "sweetalert2": "^11.6.13",
     "typescript": "5.4.3",
