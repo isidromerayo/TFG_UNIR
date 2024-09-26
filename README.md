@@ -371,6 +371,9 @@ Circle CI
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/isidromerayo/TFG_UNIR/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/isidromerayo/TFG_UNIR/tree/main)
 
+SonarQube/SonarCloud
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=isidromerayo_TFG_UNIR)](https://sonarcloud.io/summary/new_code?id=isidromerayo_TFG_UNIR)
 
 ### Referencias
 
