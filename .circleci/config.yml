@@ -26,6 +26,25 @@ jobs:
       - run:
           name: Test
           command: mvn test --file backend/pom.xml
+#
+# Frontend
+#
+  build:
+    parameters:
+      directory:
+        type: string
+    docker:
+      - image: cimg/node:18
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          run: npm install
+          working-directory: ./${parameters.directory}
+      - run:
+          name: Build project
+          run: npm run build
+          working-directory: ./${parameters.directory}
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -34,3 +53,9 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
+  build-frontend:
+    jobs:
+      - build:
+          matrix:
+            parameters:
+              directory: ["frontend-angular", "frontend-react", "frontend-vue"]
