@@ -10,11 +10,11 @@
         - 'frontend-vue/**'
   
   jobs:
-    build:
+    build: 
       runs-on: ubuntu-latest
       strategy:
-      matrix:
-        directory: ['frontend-angular', 'frontend-react', 'frontend-vue']
+        matrix:
+          directory: ['frontend-angular', 'frontend-react', 'frontend-vue']
 
       steps:
         - name: Checkout code
