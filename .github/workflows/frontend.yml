@@ -1,34 +1,42 @@
-  name: Frontend Build
-  
-  on:
-    push:
-      branches:
-        - main
-      paths:
-        - 'frontend-angular/**'
-        - 'frontend-react/**'
-        - 'frontend-vue/**'
-  
-  jobs:
-    build: 
-      runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          directory: ['frontend-angular', 'frontend-react', 'frontend-vue']
+name: Frontend Build
 
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
-  
-        - name: Set up Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 18
-  
-        - name: Install dependencies
-          run: npm install
-          working-directory: ./${{ matrix.directory }}
-  
-        - name: Build project
-          run: npm run build
-          working-directory: ./${{ matrix.directory }}
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend-angular/**'
+      - 'frontend-react/**'
+      - 'frontend-vue/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        directory: ['frontend-angular', 'frontend-react', 'frontend-vue']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ./${{ matrix.directory }}/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles(format('{0}/package-lock.json', matrix.directory)) }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./${{ matrix.directory }}
+
+      - name: Build project
+        run: npm run build
+        working-directory: ./${{ matrix.directory }}
