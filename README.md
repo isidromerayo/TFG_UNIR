@@ -61,7 +61,7 @@ Lanzar aplicación desde consola
 
 ```
 cd backend
- ./mvnw spring-boot:run
+./mvnw spring-boot:run
 ```
 
 Visualizar API expuesta
