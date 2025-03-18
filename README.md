@@ -118,6 +118,12 @@ Para detener las instancias de los contenedores `docker compose stop`.
  ✔ Container backend-maria_db-1     Stopped     0.5s 
 ```
 
+##### Publicar imagen en docker
+
+Deberemos estar logeados en nuestra cuenta de docker
+
+`docker push isidromerayo/spring-backend-tfg:X.Y.Z`
+
 ### Frontend
 
 Estudiar:
