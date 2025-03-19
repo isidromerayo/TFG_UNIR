@@ -5,7 +5,34 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # Maven (Java) configuration
+  - package-ecosystem: "maven"
+    directory: "/backend" # Location of pom.xml
     schedule:
       interval: "weekly"
+      event: push
+      branch: main
+
+  # npm (JavaScript) configuration for frontend-react
+  - package-ecosystem: "npm"
+    directory: "/frontend-react" # Ubicación del archivo package.json
+    schedule:
+      interval: "weekly"
+      event: push
+      branch: main
+
+  # npm (JavaScript) configuration for frontend-angular
+  - package-ecosystem: "npm"
+    directory: "/frontend-angular" # Ubicación del archivo package.json
+    schedule:
+      interval: "weekly"
+      event: push
+      branch: main
+
+  # npm (JavaScript) configuration for frontend-vue
+  - package-ecosystem: "npm"
+    directory: "/frontend-vue" # Ubicación del archivo package.json
+    schedule:
+      interval: "weekly"
+      event: push
+      branch: main
