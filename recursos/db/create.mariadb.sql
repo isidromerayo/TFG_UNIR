@@ -1,6 +1,8 @@
- -- create NEW database
-create database tfg_unir;
+-- create NEW database
+CREATE DATABASE IF NOT EXISTS tfg_unir;
 -- create user
-create user 'user_tfg'@'%' identified by 'tfg_un1r_PWD';
+CREATE USER IF NOT EXISTS 'user_tfg'@'%' IDENTIFIED BY 'tfg_un1r_PWD';
 -- give all privileges to the user
-grant all on tfg_unir.* to 'user_tfg'@'%'; 
+GRANT ALL PRIVILEGES ON tfg_unir.* TO 'user_tfg'@'%';
+-- apply changes
+FLUSH PRIVILEGES;
