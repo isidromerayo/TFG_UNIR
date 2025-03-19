@@ -50,6 +50,8 @@ Carga inicial para utilizar por el backend con Spring Boot con datos de pruebas 
 
 `docker run --name mariadb-tfg -p 3306:3306 -d isidromerayo/mariadb-tfg`
 
+Para publicar en docker hub `docker push isidromerayo/mariadb-tfg:X.Y.Z`
+
 #### BBDD: H2 para test
 
 
@@ -81,7 +83,7 @@ Construir imagen de aplicación con el jar generado del backend (con el `spring.
 ```
 cd backend
 ./mvnw clean install
-docker build --build-arg JAR_FILE=target/backend.jar -t isidromerayo/spring-backend-tfg:VERSION-X.Y.Z .
+docker build -t isidromerayo/spring-backend-tfg:VERSION-X.Y.Z .
 ```
 
 https://spring.io/guides/topicals/spring-boot-docker/
