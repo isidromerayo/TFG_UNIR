@@ -23,5 +23,13 @@ jobs:
       working-directory: ./${{ matrix.directory }}
     - run: npm run build
       working-directory: ./${{ matrix.directory }}
-    - run: npm audit
+    - run: |
+          npm audit
+          EXIT_CODE=$?
+          echo "npm audit exit code: $EXIT_CODE"
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "npm audit found vulnerabilities."
+          else
+            echo "npm audit found no vulnerabilities."
+          fi
       working-directory: ./${{ matrix.directory }}
