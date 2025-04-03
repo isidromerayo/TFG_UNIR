@@ -1,3 +1,5 @@
+# This workflow runs OWASP Dependency Check on the Maven project and uploads the report as an artifact.
+# It is triggered on pushes and pull requests to the main branch.
 name: OWASP Dependency Check
 
 on:
@@ -20,7 +22,7 @@ jobs:
     - name: Run OWASP Dependency Check
       run: mvn dependency-check:check -f backend/pom.xml -Dnvd.api.key=${{ secrets.NVD_API_KEY }}
     - name: Upload Dependency Check Report
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v3
       with:
         name: dependency-check-report
-        path: backend/target/dependency-check-report.html
+        path: backend/target/dependency-check-report.html        
