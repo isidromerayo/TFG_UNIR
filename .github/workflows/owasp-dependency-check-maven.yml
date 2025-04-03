@@ -25,7 +25,7 @@ jobs:
           echo "NVD_API_KEY is NOT set"
         fi
     - name: Run OWASP Dependency Check
-      run: mvn dependency-check:check -f backend/pom.xml -Dnvd.api.key=${{ secrets.NVD_API_KEY }}
+      run: mvn dependency-check:check -Pdependency-check -f backend/pom.xml -Dnvd.api.key=${{ secrets.NVD_API_KEY }}
     - name: Upload Dependency Check Report
       uses: actions/upload-artifact@v4
       with:
