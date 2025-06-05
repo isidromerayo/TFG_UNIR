@@ -1,21 +1,27 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AccesoComponent } from './acceso.component';
 
 describe('AccesoComponent', () => {
   let component: AccesoComponent;
   let fixture: ComponentFixture<AccesoComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [AccesoComponent],
+      imports: [FormsModule, HttpClientTestingModule],
+      providers: [],
+    }).compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [AccesoComponent]
-    });
     fixture = TestBed.createComponent(AccesoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
