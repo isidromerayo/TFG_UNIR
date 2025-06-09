@@ -29,7 +29,7 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.15",
+    "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.22.15",
     "@jest/globals": "^29.6.4",
