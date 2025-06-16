@@ -12,7 +12,7 @@
     "test-headless-cc": "jest --no-watch --coverage --browsers=ChromeHeadless"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.3.1",
+    "@hookform/resolvers": "^5.1.1",
     "@types/node": "20.17.10",
     "@types/react": "18.2.69",
     "@types/react-dom": "18.3.5",
