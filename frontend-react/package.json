@@ -32,7 +32,7 @@
     "@babel/core": "^7.22.15",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.22.15",
-    "@jest/globals": "^29.6.4",
+    "@jest/globals": "^30.0.2",
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
     "babel-jest": "^29.6.4",
