@@ -190,26 +190,26 @@ Contraseña: __1234__
 Versiones:
 
 ```
-Angular CLI: 16.0.6
-Node: 16.20.1
-Package Manager: npm 8.19.4
-
+Angular CLI: 20.1.1
+Node: 22.17.1
+Package Manager: npm 10.9.2
 OS: linux x64
 
-Angular: 16.1.1
-... animations, common, compiler, compiler-cli, core, forms
+Angular: 20.1.1
+... animations, cli, common, compiler, compiler-cli, core, forms
 ... platform-browser, platform-browser-dynamic, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1601.0
-@angular-devkit/build-angular   16.1.0
-@angular-devkit/core            16.1.0
-@angular-devkit/schematics      16.0.6
-@angular/cli                    16.0.6
-@schematics/angular             16.0.6
-rxjs                            7.8.1
-typescript                      5.0.4
+@angular-devkit/architect       0.2001.1
+@angular-devkit/build-angular   20.1.1
+@angular-devkit/core            20.1.1
+@angular-devkit/schematics      20.1.1
+@schematics/angular             20.1.1
+rxjs                            7.8.2
+typescript                      5.8.3
+zone.js                         0.15.1
+
 ```
 
 ##### Instalar y ejecutar
